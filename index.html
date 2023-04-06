@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 3 Storage</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7/web3.js" integrity="sha512-fy0QLHporAlL073GVvyMRGjQvT2qaMuM2v/UBPu+jYavDrYKCBiWGbFbkxTSl6T4XmG15aAe0OMeM0yP1Ckvxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="container-xxl" id="container-xxl">
+
+        <div class="menu" id="menu">
+            <table class="menu-table">
+                <tr>
+                    <td><span class="menu-link"  onclick="openAddFiles()">Add Files</span></td>
+                </tr>
+                <tr>
+                    <td><span class="menu-link"  onclick="openFiles()">View Files</span></td>
+                </tr>
+                <tr>
+                    <td><span class="menu-link" onclick="openSettings()">Settings</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="settings" id="settings" style="display: none;">
+            <table class="setting-table">
+                <tr>
+                    <td colspan="2"> <h6><b>Configuration Settings</b></h6></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>API KEY</p>
+                    </td>
+                    <td>
+                        <input type="text" name="api" id="api" placeholder="Enter API Key">
+                        <button class="button" style="width:50%;">Save</button>
+                    </td>
+                </tr>
+            </table>
+            <button class="button" style=" position: fixed; right: 0; top:0; margin: 10px;" onclick="openMenu()"> Go to Main Menu</button>
+        </div>
+
+
+        <div class="addFile" id="addFile" style="display:none;">
+           
+
+            <table class="add-table">
+                <tr>
+                    <td colspan="2">Upload Files</td>
+                </tr>
+                <tr>
+                    <td>Select File </td>
+                    <td><input type="file" name="" id="fileInput"></td>
+                </tr>
+                <tr>
+                    <td>File Information </td>
+                    <td id="file-info" style="text-align: left; font-size: 14px; font-family: 'Courier New', Courier, monospace;">
+                        File Name: - <br><br> File Type: - <br> File Size: - <br><br>	<button id="uploadButton" style="width: 100%; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" class="button" onclick="storeImage()" disabled>Upload</button> 
+                    </td>
+                </tr>
+            </table>
+            <button class="button" style=" position: fixed; right: 0; top:0; margin: 10px;" onclick="openMenu()"> Go to Main Menu</button>
+
+        </div>
+      
+        <div id="logDiv" class="logDiv" style="position: fixed; right:0; top:0; margin: 100px;">
+            
+        </div>
+
+        <div id="output" style="display:none;">
+            <button class="button" style=" position: fixed; right: 0; top:0; margin: 10px;" onclick="openMenu()"> Go to Main Menu</button>
+        </div>
+    </div>
+
+</body>
+</html>
