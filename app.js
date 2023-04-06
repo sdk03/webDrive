@@ -2,7 +2,7 @@
 var web3vlx = new Web3(new Web3.providers.HttpProvider("https://evmexplorer.velas.com/rpc"));
 
 // SMART CONTRACT DECLARE
-const SMART_CONTRACT_ADDRESS = '0x23cBE614a3a5d41fc38dAc32A33403cb02CA6d39';
+const SMART_CONTRACT_ADDRESS = 'YOUR_DEPLOYED_CONTRACT_ADDRESS';
 const ABI = [
 	{
 		"inputs": [
@@ -281,7 +281,7 @@ document.getElementById('logDiv').innerHTML = `<br><br>
 
 
 const endpoint = 'https://api.nft.storage/upload';
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDU0NTU4MjQxNGM5ZTMyZjI4ODAzODNkYzczMzUxMUNCQTYyNEQ5QTgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4MDY1NjU3NTI5MCwibmFtZSI6InRyaWFsIn0.QLPns4wStjHRptNIssMjB2iXXrzmJtAom2OVZvzpehw';
+const token = 'YOUR_API_KEY';
 
 if (fileInput.files.length === 0) {
   console.log('No file selected.');
